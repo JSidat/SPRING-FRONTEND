@@ -36,11 +36,17 @@ function renderBooks(book) {
     const editButton = document.createElement("button")
     editButton.className = "btn btn-primary";
     editButton.innerText = "Edit";
+    const modalBg = document.querySelector('.modal-bg');
     editButton.addEventListener('click', function() {
-        deleteBook(book.id);
+        modalBg.classList.add('bg-active');
         updateBook(book.id);
     })
     cardBody.appendChild(editButton);
+
+    const modalClose = document.querySelector('.modal-close');
+    modalClose.addEventListener('click', function() {
+        modalBg.classList.remove('bg-active');
+    })
 
     const deleteButton = document.createElement("button")
     deleteButton.className = "btn btn-danger";
@@ -71,16 +77,16 @@ function updateBook(id) {
                 author: this.author.value,
                 genre: this.genre.value
         };
-
-    axios.put('https://localhost:8080/updateBook/' + id, data)
+        axios.put('https://localhost:8080/updateBook/' + id, data)
     .then(() => {
         this.reset();
         this.title.focus();
-        getBooks();  
+        getBooks();
         })      
     }
-    .catch(err => console.error(err));
+    .catch(err => console.error(err)));
 }
+
 
 document.getElementById("bookForm").addEventListener('submit', function(event) {
     event.preventDefault();

@@ -102,3 +102,85 @@ form {
   height: 150px;
   margin-left: 25%;
 }
+
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+#modal-form {
+  margin-right: 38%;
+  background-image: linear-gradient(120deg, #f6d365 0%, #e27759 100%);
+}
+
+.form-group {
+  position: relative;
+}
+
+.modal-button {
+  color: #f1491a;
+  font-size: large;
+  width: 200px;
+  height: 50px;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #f1491a;
+  position: relative;
+  margin-left: 20%;
+}
+
+.modal-button::before, .modal-button::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  background: white;
+  transform: skewX(50deg);
+  transition: .3s linear;
+}
+
+.modal-button::before {
+  top: -2px;
+  left: 10%;
+}
+
+.modal-button::after {
+  bottom: -2px;
+  right: 10%;
+}
+
+.modal-button:hover::before {
+  left: 80%;
+}
+
+.modal-button:hover::after {
+  right: 80%;
+}
+
+.modal-close {
+  position: relative;
+  bottom: 250px;
+  left: 95px;
+  cursor: pointer;
+}
+
+
+
+
+
