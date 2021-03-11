@@ -10,7 +10,7 @@ function getBooks() {
         books.forEach(book => {
             const newBook = renderBooks(book);
             console.log("New Book: " + newBook);
-            output.appendChild(newBook); 
+            output.prepend(newBook); 
         });
     }).catch(err => console.error(err))
 }
@@ -51,7 +51,7 @@ function renderBooks(book) {
 }
 
 function deleteBook(id) {
-    axios.delete('http://localhost:8080/deleteBook/' + id)
+    axios.delete('http://localhost:8080/removeBook/' + id)
     .then(() => getBooks())
     .catch(err => console.error(err));
 }
@@ -68,7 +68,7 @@ document.getElementById("bookForm").addEventListener('submit', function(event) {
     axios.post('http://localhost:8080/createBook', data)
     .then(() => {
         this.reset();
-        this.name.focus();
+        this.title.focus();
         getBooks();
     })
     .catch(err => console.error(err));

@@ -55,7 +55,7 @@ form {
   transition: all 0.3s ease;
   border: 2px solid #f1491a;
   position: relative;
-  margin-left: 15%;
+  margin-left: 20%;
 }
 
 .add-button::before, .add-button::after {
