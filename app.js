@@ -36,6 +36,10 @@ function renderBooks(book) {
     const editButton = document.createElement("button")
     editButton.className = "btn btn-primary";
     editButton.innerText = "Edit";
+    editButton.addEventListener('click', function() {
+        deleteBook(book.id);
+        updateBook(book.id);
+    })
     cardBody.appendChild(editButton);
 
     const deleteButton = document.createElement("button")
@@ -53,6 +57,28 @@ function renderBooks(book) {
 function deleteBook(id) {
     axios.delete('http://localhost:8080/removeBook/' + id)
     .then(() => getBooks())
+    .catch(err => console.error(err));
+}
+
+function updateBook(id) {
+
+        document.getElementById("update-modal").addEventListener('submit', function(event) {
+            event.preventDefault();
+
+             const data = {
+
+                title: this.title.value,
+                author: this.author.value,
+                genre: this.genre.value
+        };
+
+    axios.put('https://localhost:8080/updateBook/' + id, data)
+    .then(() => {
+        this.reset();
+        this.title.focus();
+        getBooks();  
+        })      
+    }
     .catch(err => console.error(err));
 }
 
