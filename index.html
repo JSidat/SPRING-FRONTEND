@@ -22,7 +22,7 @@
 
 
 
-    <form>
+    <form id="personForm">
         <div class="form-group">
             <label for="formGroupExampleInput">Title</label>
             <input name="title" class="form-control" id="book-title" placeholder="Enter Book Title" autocomplete="off">
@@ -32,11 +32,17 @@
             <input name="author" class="form-control" id="book-author" placeholder="Enter Author Name"
                 autocomplete="off">
         </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">genre</label>
+            <input name="genre" class="form-control" id="book-genre" placeholder="Enter genre here" autocomplete="off">
+        </div>
+        <br>
+        <div class="container">
+            <button class="add-button" type="submit">Add Book</button>
+        </div>
     </form>
 
-    <div class="container">
-        <button class="add-button" type="submit">Add Book</button>
-    </div>
+    
 
     <div id="output" class="container"></div>
 

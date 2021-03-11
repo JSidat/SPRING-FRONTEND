@@ -30,7 +30,7 @@ function renderBooks(book) {
 
     const cardText = document.createElement("p");
     cardText.className = "card-text";
-    cardText.innerText = "By: " + book.author;
+    cardText.innerText = "By: " + book.author + "(" + book.genre + ")";
     cardBody.appendChild(cardText); 
 
     const editButton = document.createElement("a")
@@ -47,5 +47,23 @@ function renderBooks(book) {
 
     return newBook;
 }
+
+document.getElementById("personForm").addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const data = {
+        title: this.title.value,
+        author: this.author.value,
+        genre: this.genre.value
+    };
+
+    axios.post('http://localhost:8080/createBook', data)
+    .then(() => {
+        this.reset();
+        this.name.focus();
+        getBooks();
+    })
+    .catch(err => console.error(err));
+})
 
 getBooks();
