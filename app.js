@@ -4,7 +4,7 @@ const output = document.getElementById('output');
 function getBooks() {
     axios.get('http://localhost:8080/getBooks')
     .then(res => {
-        
+        output.innerHTML = "";
         const books = res.data;
 
         books.forEach(book => {
@@ -38,17 +38,25 @@ function renderBooks(book) {
     editButton.innerText = "Edit";
     cardBody.appendChild(editButton);
 
-    const deleteButton = document.createElement("a")
+    const deleteButton = document.createElement("button")
     deleteButton.className = "btn btn-danger";
     deleteButton.style = "background-color: #f1491a";
     deleteButton.innerText = "Delete";
-    
+    deleteButton.addEventListener('click', function() {
+        deleteBook(book.id);
+    });
     cardBody.appendChild(deleteButton);  
 
     return newBook;
 }
 
-document.getElementById("personForm").addEventListener('submit', function(event) {
+function deleteBook(id) {
+    axios.delete('http://localhost:8080/deleteBook/' + id)
+    .then(() => getBooks())
+    .catch(err => console.error(err));
+}
+
+document.getElementById("bookForm").addEventListener('submit', function(event) {
     event.preventDefault();
 
     const data = {
