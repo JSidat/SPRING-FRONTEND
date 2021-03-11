@@ -33,7 +33,7 @@ function renderBooks(book) {
     cardText.innerText = "By: " + book.author + "(" + book.genre + ")";
     cardBody.appendChild(cardText); 
 
-    const editButton = document.createElement("a")
+    const editButton = document.createElement("button")
     editButton.className = "btn btn-primary";
     editButton.innerText = "Edit";
     cardBody.appendChild(editButton);
