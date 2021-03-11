@@ -1,0 +1,51 @@
+'use strict'
+const output = document.getElementById('output');
+
+function getBooks() {
+    axios.get('http://localhost:8080/getBooks')
+    .then(res => {
+        
+        const books = res.data;
+
+        books.forEach(book => {
+            const newBook = renderBooks(book);
+            console.log("New Book: " + newBook);
+            output.appendChild(newBook); 
+        });
+    }).catch(err => console.error(err))
+}
+
+function renderBooks(book) {
+    const newBook = document.createElement("div");
+    newBook.className = "card";
+    
+    const cardHeader = document.createElement("div");
+    cardHeader.className = "card-header";
+    cardHeader.innerHTML = book.title;
+    newBook.appendChild(cardHeader);
+
+    const cardBody = document.createElement("div");
+    cardBody.className = "card-body";
+    newBook.appendChild(cardBody);
+
+    const cardText = document.createElement("p");
+    cardText.className = "card-text";
+    cardText.innerText = "By: " + book.author;
+    cardBody.appendChild(cardText); 
+
+    const editButton = document.createElement("a")
+    editButton.className = "btn btn-primary";
+    editButton.innerText = "Edit";
+    cardBody.appendChild(editButton);
+
+    const deleteButton = document.createElement("a")
+    deleteButton.className = "btn btn-danger";
+    deleteButton.style = "background-color: #f1491a";
+    deleteButton.innerText = "Delete";
+    
+    cardBody.appendChild(deleteButton);  
+
+    return newBook;
+}
+
+getBooks();

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReadingList</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/d5e8686235.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1><i class="fas fa-book-open" style="color: #f1491a;"></i> My<span class="text">Reading</span> List</h1>
+    </header>
+
+
+
+    <form>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Title</label>
+            <input name="title" class="form-control" id="book-title" placeholder="Enter Book Title" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Author</label>
+            <input name="author" class="form-control" id="book-author" placeholder="Enter Author Name"
+                autocomplete="off">
+        </div>
+    </form>
+
+    <div class="container">
+        <button class="add-button" type="submit">Add Book</button>
+    </div>
+
+    <div id="output" class="container"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
