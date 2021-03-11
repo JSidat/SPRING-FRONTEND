@@ -1,4 +1,8 @@
 'use strict'
+
+let id;
+const modalBg = document.querySelector('.modal-bg');
+const modalClose = document.querySelector('.modal-close');
 const output = document.getElementById('output');
 
 function getBooks() {
@@ -36,7 +40,16 @@ function renderBooks(book) {
     const editButton = document.createElement("button")
     editButton.className = "btn btn-primary";
     editButton.innerText = "Edit";
+    editButton.addEventListener('click', function() {
+        id = book.id;
+        modalBg.classList.add('bg-active');
+    })
     cardBody.appendChild(editButton);
+
+    
+    modalClose.addEventListener('click', function() {
+        modalBg.classList.remove('bg-active');
+    })
 
     const deleteButton = document.createElement("button")
     deleteButton.className = "btn btn-danger";
@@ -55,6 +68,27 @@ function deleteBook(id) {
     .then(() => getBooks())
     .catch(err => console.error(err));
 }
+
+    document.getElementById("modal-form").addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const data = {
+
+            title: this.title.value,
+            author: this.author.value,
+            genre: this.genre.value
+        };
+
+        axios.put('http://localhost:8080/updateBook/' + id, data)
+        .then(() => {
+        this.reset();
+        this.title.focus();
+        getBooks();
+        })      
+    
+    .catch(err => console.error(err));
+});
+
 
 document.getElementById("bookForm").addEventListener('submit', function(event) {
     event.preventDefault();
