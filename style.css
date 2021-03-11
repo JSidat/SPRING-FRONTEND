@@ -55,7 +55,7 @@ form {
   transition: all 0.3s ease;
   border: 2px solid #f1491a;
   position: relative;
-  margin-left: 20%;
+  margin-left: 27%;
 }
 
 .add-button::before, .add-button::after {
@@ -116,6 +116,7 @@ form {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s;
+  z-index: 100;
 }
 
 .bg-active {
@@ -142,7 +143,7 @@ form {
   transition: all 0.3s ease;
   border: 2px solid #f1491a;
   position: relative;
-  margin-left: 20%;
+  margin-left: 25%;
 }
 
 .modal-button::before, .modal-button::after {
@@ -170,13 +171,13 @@ form {
 }
 
 .modal-button:hover::after {
-  right: 80%;
+  right: 90%;
 }
 
 .modal-close {
   position: relative;
   bottom: 250px;
-  left: 95px;
+  left: 200px;
   cursor: pointer;
 }
 
