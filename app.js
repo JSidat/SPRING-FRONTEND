@@ -108,4 +108,13 @@ document.getElementById("bookForm").addEventListener('submit', function(event) {
     .catch(err => console.error(err));
 })
 
+function showAlert(message, className) {
+    const alert = document.createElement('div');
+    alert.className = `alert alert-${className}`;
+    alert.appendChild(document.createTextNode(message));
+    
+    const container = document.querySelector('.alert-container');
+    const form = document.querySelector('')
+}
+
 getBooks();

@@ -16,59 +16,58 @@
 </head>
 
 <body>
-    <header>
-        <h1><i class="fas fa-book-open" style="color: #f1491a;"></i> My<span class="text">Reading</span> List</h1>
-    </header>
-
-
-
-    <form id="bookForm">
-        <div class="form-group">
-            <label for="formGroupExampleInput">Title</label>
-            <input name="title" class="form-control" id="book-title" placeholder="Enter Book Title" autocomplete="off">
-        </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Author</label>
-            <input name="author" class="form-control" id="book-author" placeholder="Enter Author Name"
-                autocomplete="off">
-        </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Genre</label>
-            <input name="genre" class="form-control" id="book-genre" placeholder="Enter genre here" autocomplete="off">
-        </div>
-        <br>       
-            <button class="add-button" type="submit">Add Book</button>
-    </form>
-
-
-    <div class="modal-bg">
-        <form id="modal-form">
+    <div class="main-container">
+        <header>
+            <h1><i class="fas fa-book-open" style="color: #f1491a;"></i> My<span class="text">Reading</span> List</h1>
+        </header>
+        <form id="bookForm">
             <div class="form-group">
                 <label for="formGroupExampleInput">Title</label>
-                <input name="title" class="form-control" id="modal-title" placeholder="Enter Book Title" autocomplete="off">
+                <input name="title" class="form-control" id="book-title" placeholder="Enter Book Title" autocomplete="off">
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">Author</label>
-                <input name="author" class="form-control" id="modal-author" placeholder="Enter Author Name"
+                <input name="author" class="form-control" id="book-author" placeholder="Enter Author Name"
                     autocomplete="off">
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">Genre</label>
-                <input name="genre" class="form-control" id="modal-genre" placeholder="Enter genre here" autocomplete="off">
+                <input name="genre" class="form-control" id="book-genre" placeholder="Enter genre here" autocomplete="off">
             </div>
-            <br>
-            <button class="modal-button" type="submit">Update Book</button>
-            <span class="modal-close">X</span>
+            <br>       
+                <button class="add-button" type="submit">Add Book</button>
         </form>
+
+
+        <div class="modal-bg">
+            <form id="modal-form">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Title</label>
+                    <input name="title" class="form-control" id="modal-title" placeholder="Enter Book Title" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Author</label>
+                    <input name="author" class="form-control" id="modal-author" placeholder="Enter Author Name"
+                        autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Genre</label>
+                    <input name="genre" class="form-control" id="modal-genre" placeholder="Enter genre here" autocomplete="off">
+                </div>
+                <br>
+                <button class="modal-button" type="submit">Update Book</button>
+                <span class="modal-close">X</span>
+            </form>
     
+        </div>
+
+        </div>
+
+        <div id="output" class="container"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="app.js"></script>
     </div>
-
-    </div>
-
-    <div id="output" class="container"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="app.js"></script>
 </body>
 
 </html>
