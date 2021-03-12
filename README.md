@@ -15,7 +15,7 @@
 
 ## Introduction
 
-The objectives of thhis project was to create CRUD (Create, Read, Update, Delete) application by incorporating Spring (Java framework) for creating the backend, and Javascript, HTML and CSS for the frontend. This README will act as documentation for the project and how the different components of the project came together through project planning, code execution and testinng and evaluating.   
+The objectives of this project was to create CRUD (Create, Read, Update, Delete) application by incorporating Spring (Java framework) for creating the backend, and Javascript, HTML and CSS for the frontend. This README will act as documentation for the project and how the different components of the project came together through project planning, code execution and testinng and evaluating.   
 
 ## Project Scope
 
@@ -42,4 +42,12 @@ The scope of the project outlines the minimum requirements for successful comple
 * Database: MySQL/H2 database
 * Test suite: JUnit
 * IDE: Eclipse (backend)/VSCode(frontend)
+
+## Jira-Board
+
+A kanban board was used to manage workflow and keep on top of tasks that were to be completed in order to successfully complete the project. Agile methodologies were implemented where applicable as set out in the brief. For example, having a sprint backlog and defining user stories. Due to the solo nature of the project, a lot of the scrum framework could not be implemented. MoSCow prioritisation was implemented in the kanban board, where everything labelled red was deemed to be high priority as these tasks were necessary to progressing effectively through the project. As the tasks were completed the were transferred along the kanban board, giving a good visual representation of progress throughout the project.
+
+### Initial Jira Board
+
+![Initial Jira Board]()
 
