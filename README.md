@@ -42,7 +42,7 @@ The scope of the project outlines the minimum requirements for successful comple
 - Test suite: JUnit
 - IDE: Eclipse (backend)/VSCode(frontend)
 
-## Jira-Board
+## Jira Board
 
 A kanban board was used to manage workflow and keep on top of tasks that were to be completed in order to successfully complete the project. Agile methodologies were implemented where applicable as set out in the brief. For example, having a sprint backlog and defining user stories. Due to the solo nature of the project, a lot of the scrum framework could not be implemented. MoSCow prioritisation was implemented in the kanban board, where everything labelled red was deemed to be high priority as these tasks were necessary to progressing effectively through the project. As the tasks were completed the were transferred along the kanban board, giving a good visual representation of progress throughout the project.
 
@@ -54,6 +54,9 @@ A kanban board was used to manage workflow and keep on top of tasks that were to
 
 ![Ongoing Jira Board](./Images/ongoing_jira_board.png)
 
+## Entity Relationship Diagram
 
+This is the structure of the table that I used for data storage and persistence from my application.
+![ERD Diagram](./Images/ERD.png)
 
 
