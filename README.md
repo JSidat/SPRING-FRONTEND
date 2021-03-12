@@ -50,4 +50,12 @@ A kanban board was used to manage workflow and keep on top of tasks that were to
 
 ![Initial Jira Board](./Images/initial_jira_board.png)
 
+### Ongoing Jira Board
+
+![Ongoing Jira Board](./Images/ongoing_jira_board.png)
+
+### Completed Jira Board
+
+![Completed Jira Board](./Images/backend_completed_board.png)
+
 
