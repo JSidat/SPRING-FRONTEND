@@ -49,5 +49,5 @@ A kanban board was used to manage workflow and keep on top of tasks that were to
 
 ### Initial Jira Board
 
-![Initial Jira Board]()
+![Initial Jira Board](https://github.com/JSidat/SPRING-FRONTEND/blob/README/Images/initial_jira_board.png)
 
