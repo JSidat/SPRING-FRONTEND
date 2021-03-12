@@ -93,6 +93,11 @@ function deleteBook(id) {
 document.getElementById("bookForm").addEventListener('submit', function(event) {
     event.preventDefault();
 
+    if(this.title.value === '' || this.author.value === '' || this.genre.value === '') {
+        showAlert('Please fill in fields', 'danger');
+    } else {
+        showAlert('Success!','success');
+
     const data = {
         title: this.title.value,
         author: this.author.value,
@@ -106,6 +111,19 @@ document.getElementById("bookForm").addEventListener('submit', function(event) {
         getBooks();
     })
     .catch(err => console.error(err));
+    }
 })
+
+function showAlert(message, className) {
+    const div = document.createElement('div');
+    div.className = `alert alert-${className}`;
+    div.appendChild(document.createTextNode(message));
+    
+    const container = document.querySelector('.main-container');
+    const header = document.querySelector('.header');
+    container.insertBefore(div, header);
+
+    setTimeout(() => document.querySelector('.alert').remove(), 3000);
+}
 
 getBooks();
