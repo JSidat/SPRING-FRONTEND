@@ -54,6 +54,12 @@ A kanban board was used to manage workflow and keep on top of tasks that were to
 
 ![Ongoing Jira Board](./Images/ongoing_jira_board.png)
 
+### Github(Feature-Branch Network)
+
+A feature-branch model was used to organise the commits on github for thsi project. The branches for this project were initially set up by functionality, where each component of CRUD was implemented in it's own branch before merging to the "dev" branch. Once the project was fully functional, the dev branch was pushed to main as the final commit. 
+
+![feature-branch](./Images/feature-branch.png)
+
 ## Entity Relationship Diagram
 
 This is the structure of the table that I used for data storage and persistence for my application.
