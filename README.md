@@ -85,3 +85,15 @@ A total coverage of 87.6% was achieved on the back-end of the website through a 
 ![Testing coverage report](./Images/testing_coverage.png)
 
 ![Test Runs](./Images/test_runs.png)
+
+### Future Imporvements
+
+* Improve the functionality of the page. For example, have a check box to mark as "completed".
+* Have a filter system, where users can filter by a certain parameter, for instance, genre or fiction/non-fiction.
+* Have seperate sections for different book types by topic or genre.
+
+### Acknowledgements
+
+I'd like to thank the QA trainers for giving us the resources to complete the project and investing their time and knowledge into building the foundations for my tech career.
+
+By Junaid Sidat
