@@ -43,6 +43,15 @@ function renderBooks(book) {
     editButton.addEventListener('click', function() {
         id = book.id;
         modalBg.classList.add('bg-active');
+        if (book.title != 'null') {
+            document.getElementById('modal-title').value = book.title
+        };
+        if (book.author != '') {
+            document.getElementById('modal-author').value = book.author
+        };
+        if (book.genre != '') {
+            document.getElementById('modal-genre').value = book.genre
+        };
     })
     cardBody.appendChild(editButton);
 
@@ -73,6 +82,11 @@ function deleteBook(id) {
     document.getElementById("modal-form").addEventListener('submit', function(event) {
         event.preventDefault();
 
+         if(this.title.value === '' || this.author.value === '' || this.genre.value === '') {
+        showAlert('Please fill in fields', 'danger');
+    } else {
+        showAlert('Success!','success');
+
         const data = {
 
             title: this.title.value,
@@ -88,6 +102,7 @@ function deleteBook(id) {
         })      
     
     .catch(err => console.error(err));
+    }
 });
 
 
