@@ -62,5 +62,6 @@ This is the structure of the table that I used for data storage and persistence 
 ## Testing
 
 A total coverage of 87.6% was achieved on the backend of the website through a combination of unit testing and integration testing. Selenium was used for automated testing purposes, and was used to assess the functionality of the frontend on the chrome browser.
-![Testing coverage report](./Images/testing_coverage.png)(./Images/test_runs.png)
+![Testing coverage report](./Images/testing_coverage.png)
 
+![Test Runs](./Images/test_runs.png)
