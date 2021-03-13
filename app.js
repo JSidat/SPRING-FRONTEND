@@ -97,6 +97,7 @@ function deleteBook(id) {
         axios.put('http://localhost:8080/updateBook/' + id, data)
         .then(() => {
         this.reset();
+        modalBg.classList.remove('bg-active');
         this.title.focus();
         getBooks();
         })      
