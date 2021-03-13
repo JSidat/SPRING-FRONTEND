@@ -6,11 +6,11 @@
 - [Project Scope](#Project-Scope)
 - [Technology constraints](#Technology-constraints)
 - [Kanban Board](#Jira-Board)
-- [Version Control](#Version-control)
-- [Data Persistence](#Data-Persistence)
+- [Version Control](#Github(Feature-Branch-Network))
+- [Data Persistence](#Entity-Relationship-Diagram)
 - [Testing](#Testing)
-- [Areas for improvememt](#Areas-for-improvement)
-- [Conclusion](#Conclusion)
+- [Areas for improvememt](#Future-Improvements)
+
 
 ## Introduction
 
@@ -86,7 +86,7 @@ A total coverage of 87.6% was achieved on the back-end of the website through a 
 
 ![Test Runs](./Images/test_runs.png)
 
-### Future Imporvements
+## Future Improvements
 
 * Improve the functionality of the page. For example, have a check box to mark as "completed".
 * Have a filter system, where users can filter by a certain parameter, for instance, genre or fiction/non-fiction.
