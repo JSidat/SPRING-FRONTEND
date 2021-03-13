@@ -57,6 +57,7 @@ function renderBooks(book) {
     deleteButton.innerText = "Delete";
     deleteButton.addEventListener('click', function() {
         deleteBook(book.id);
+        showAlert('Book Deleted', 'danger');
     });
     cardBody.appendChild(deleteButton);  
 
