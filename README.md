@@ -57,6 +57,7 @@ A kanban board was used to manage workflow and keep on top of tasks that were to
 ## Entity Relationship Diagram
 
 This is the structure of the table that I used for data storage and persistence for my application.
+
 ![ERD Diagram](./Images/ERD.png)
 
 ### Back-end
@@ -68,11 +69,13 @@ The back-end was written in Java using the Spring framework. This allowed for ef
 The front-end of the application was written in JavaScript, where DOM manipulation was used to add the required elements to the webpage, with any logic that was required for CRUD functionality. JavaScript was also used to generate HTTP requests, allowing the front-end to receive data from the back-end and display it on the webpage. HTML and CSS were used to style the webpage and organise the layout of the webpage. 
 
 A picture of the front-end can be seen below. The application allows a user to store books they wish to read by entering the name of the book, the author and the genre of the book. Details of any entry could be updated by clicking the edit button, which prompts a modal to pop up on the screen. The data entered into the modal will show up as an update on the corresponding card. Cards can also be deleted.
+
 ![App page](./Images/App_page.png)
 
 ## Testing
 
 A total coverage of 87.6% was achieved on the back-end of the website through a combination of unit testing and integration testing. Selenium was used for automated testing purposes, and was used to assess the functionality of the front-end on the chrome browser.
+
 ![Testing coverage report](./Images/testing_coverage.png)
 
 ![Test Runs](./Images/test_runs.png)
